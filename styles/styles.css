@@ -1,5 +1,5 @@
 :root {
-	font-family: "Segoe UI";
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	--black: #000000;
 	--white: #ffffff;
 	--gray: #707070;
@@ -18,3 +18,126 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%;
 }
+
+/* NAVBAR STYLES */
+.navbar {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	margin: 1em 8em;
+	padding: 0 0 1em 0;
+	border-bottom: 0.3em solid var(--black);
+}
+
+.navbar-items {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	list-style-type: none;
+}
+
+.navbar-item {
+	margin: 0 3em 0 0;
+}
+
+.navbar-item > a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+.navbar-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-title {
+	font-size: 2em;
+	font-weight: 500;
+	letter-spacing: 0.25em;
+	margin-right: -0.25em;
+}
+
+.logo {
+	height: 2.5em;
+	margin: 0 0.1em;
+}
+
+.navbar-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.navbar-search-box {
+	position: relative;
+	border: 0.15em solid var(--gray);
+	margin: 0 2em 0 0;
+}
+
+.navbar-search-box > input {
+	border: none;
+	padding: 0 0.5em;
+}
+
+.magnifying-glass {
+	position: absolute;
+	top: 50%;
+	right: -5%;
+	transform: translate(-50%, -50%);
+	height: 1.5em;
+}
+
+/* HERO STYLES */
+.hero {
+	display: flex;
+	justify-content: center;
+}
+
+.hero-bg-image {
+	background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 1) 10%,
+			rgba(0, 0, 0, 1) 10%,
+			rgba(0, 0, 0, 0) 25%,
+			rgba(0, 0, 0, 0) 25%,
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, 0) 75%,
+			rgba(0, 0, 0, 0) 75%,
+			rgba(0, 0, 0, 1) 90%,
+			rgba(0, 0, 0, 1) 90%,
+			rgba(0, 0, 0, 1) 100%
+		),
+		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg"), rgba(0, 0, 0, 0);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 70vh;
+}
+
+.hero-text {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2.4em;
+	color: var(--white);
+	text-transform: uppercase;
+	width: 90%;
+	margin: 4em 0;
+}
+
+.hero-text-left {
+	align-self: flex-start;
+	font-weight: 100;
+	width: 20%;
+}
+
+.hero-text-right {
+	align-self: flex-end;
+	font-weight: 100;
+	width: 20%;
+	text-align: right;
+}
+

@@ -5,66 +5,76 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CARA CARA</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-  <nav>
-    <ul>
-      <li><a href="#">home</a></li>
-      <li><a href="#">about</a></li>
-      <li><a href="#">products</a></li>
-      <li><a href="#">contact</a></li>
+  <nav class="navbar">
+    <ul class="navbar-items">
+      <li class="navbar-item"><a href="#">home</a></li>
+      <li class="navbar-item"><a href="#">about</a></li>
+      <li class="navbar-item"><a href="#">products</a></li>
+      <li class="navbar-item"><a href="#">contact</a></li>
     </ul>
-    <div>
-      <h1>cara</h1>
-      <img src="images/icons8-pottery-96.png" alt="Pottery logo">
-      <h1>cara</h1>
+    <div class="navbar-logo">
+      <h1 class="logo-title">cara</h1>
+      <img class="logo" src="images/icons8-pottery-96.png" alt="Pottery logo">
+      <h1 class="logo-title">cara</h1>
     </div>
-    <div>
-      <input type="search" name="search" placeholder="Search...">
+    <div class="navbar-actions">
+      <div class="navbar-search-box">
+        <input type="search" name="search" placeholder="Search...">
+        <img class="magnifying-glass" src="images/1200px-Google_Magnifying_Glass.svg.png" alt="magnifying glass icon">
+      </div>
       <p>cart (0)</p>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <section>
-    <h1>ceramics crafted by hand...</h1>
-    <img src="images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg" alt="hands making pottery">
-    <h1>... from the ground up</h1>
+  <section class="hero hero-bg-image">
+    <div class="hero-text">
+      <h1 class="hero-text-left">ceramics crafted by hand...</h1>
+      <h1 class="hero-text-right">... from the ground up</h1>
+    </div>
   </section>
 
   <!-- ABOUT SECTION -->
-  <section>
-    <h1>about us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Neque laoreet suspendisse interdum consectetur libero id
-      faucibus nisl tincidunt. Facilisis mauris sit amet massa. Senectus et netus et malesuada fames
-      ac turpis egestas maecenas. Odio aenean sed adipiscing diam donec adipiscing tristique
-      risus nec. Sagittis id consectetur purus ut faucibus. Elit duis tristique sollicitudin nibh sit
-      amet commodo.</p>
-    <img src="images/Vase_Dame_2048x2048.jpg" alt="vase with flower">
-    <p>Nulla porttitor massa id neque aliquam
-      vestibulum morbi. Facilisi nullam vehicula
-      ipsum a arcu cursus vitae congue. Nam libero
-      justo laoreet sit amet cursus sit amet dictum.
-      Tristique magna sit amet purus gravida quis.
-      Velit euismod in pellentesque massa placerat.
-      In ante metus dictum at tempor commodo.
-      Libero nunc consequat interdum varius sit
-      amet mattis. Egestas sed sed risus pretium
-      quam vulputate dignissim. Diam phasellus
-      vestibulum lorem sed risus. Cursus sit amet
-      dictum sit amet justo donec enim.</p>
-    <p>Tincidunt praesent semper feugiat nibh sed.
-      Vulputate mi sit amet mauris commodo quis
-      imperdiet massa. Amet tellus cras adipiscing
-      enim eu turpis egestas pretium aenean.
-      Nullam ac tortor vitae purus</p>
-    <img src="images/Cylinder_unglazed3_2048x2048.jpg" alt="white cylinder flower pot">
+  <section class="about">
+    <div>
+      <h1 class="main-header">about us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Neque laoreet suspendisse interdum consectetur libero id
+        faucibus nisl tincidunt. Facilisis mauris sit amet massa. Senectus et netus et malesuada fames
+        ac turpis egestas maecenas. Odio aenean sed adipiscing diam donec adipiscing tristique
+        risus nec. Sagittis id consectetur purus ut faucibus. Elit duis tristique sollicitudin nibh sit
+        amet commodo.</p>
+      <div>
+        <img src="images/Vase_Dame_2048x2048.jpg" alt="vase with flower">
+        <p>Nulla porttitor massa id neque aliquam
+          vestibulum morbi. Facilisi nullam vehicula
+          ipsum a arcu cursus vitae congue. Nam libero
+          justo laoreet sit amet cursus sit amet dictum.
+          Tristique magna sit amet purus gravida quis.
+          Velit euismod in pellentesque massa placerat.
+          In ante metus dictum at tempor commodo.
+          Libero nunc consequat interdum varius sit
+          amet mattis. Egestas sed sed risus pretium
+          quam vulputate dignissim. Diam phasellus
+          vestibulum lorem sed risus. Cursus sit amet
+          dictum sit amet justo donec enim.</p>
+        <p>Tincidunt praesent semper feugiat nibh sed.
+          Vulputate mi sit amet mauris commodo quis
+          imperdiet massa. Amet tellus cras adipiscing
+          enim eu turpis egestas pretium aenean.
+          Nullam ac tortor vitae purus</p>
+      </div>
+    </div>
+    <div>
+      <img src="images/Cylinder_unglazed3_2048x2048.jpg" alt="white cylinder flower pot">
+    </div>
   </section>
 
   <!-- PRODUCTS SECTION -->
@@ -106,8 +116,12 @@
     </div>
     <div>
       <ul>
-        <li><p>Pretium nibh ipsum consequat nisl vel pretium.</p></li>
-        <li><p>Amet tellus cras adipiscing enim eu turpis.</p></li>
+        <li>
+          <p>Pretium nibh ipsum consequat nisl vel pretium.</p>
+        </li>
+        <li>
+          <p>Amet tellus cras adipiscing enim eu turpis.</p>
+        </li>
         <li>copyright 2015 - 2020</li>
       </ul>
     </div>
