@@ -25,10 +25,9 @@
       <h1 class="logo-title">cara</h1>
     </div>
     <div class="navbar-actions">
-      <div class="navbar-search-box">
+      <form class="navbar-search-box">
         <input type="search" name="search" placeholder="Search...">
-        <img class="magnifying-glass" src="images/1200px-Google_Magnifying_Glass.svg.png" alt="magnifying glass icon">
-      </div>
+      </form>
       <p>cart (0)</p>
     </div>
   </nav>
@@ -239,10 +238,14 @@
   <section class="section">
     <h1 class="main-header">contact us</h1>
     <div class="contact-form">
-      <input type="text" name="email" title="email">
-      <input type="text" name="message" title="message">
+      <form class="contact-form-inputs">
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" title="email">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <button class="primary-button form-btn" type="submit">send</button>
+      </form>
     </div>
-    <button class="primary-button" type="button">send</button>
   </section>
 
   <!-- FOOTER -->

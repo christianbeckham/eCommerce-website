@@ -72,22 +72,18 @@ html {
 }
 
 .navbar-search-box {
-	position: relative;
 	border: 0.15em solid var(--gray);
 	margin: 0 2em 0 0;
 }
 
-.navbar-search-box > input {
+.navbar-search-box > input[type="search"] {
+	background-color: var(--white);
+	background-image: url("../images/1200px-Google_Magnifying_Glass.svg.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: 1.4em;
 	border: none;
 	padding: 0 0.5em;
-}
-
-.magnifying-glass {
-	position: absolute;
-	top: 50%;
-	right: -5%;
-	transform: translate(-50%, -50%);
-	height: 1.5em;
 }
 
 /* HERO STYLES */
@@ -247,7 +243,38 @@ html {
 
 /* CONTACT STYLES */
 .contact-form {
+	width: 70%;
+	margin: 0 auto;
+	/* background-color: greenyellow; */
+}
 
+.contact-form-inputs {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form-inputs > label {
+	font-size: 1.6em;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin: 0.5em 0;
+}
+
+.contact-form-inputs > input[type="text"],
+.contact-form-inputs > textarea {
+	border: 0.1em solid var(--gray);
+	padding: 1em;
+}
+
+.form-btn {
+	margin: 3em 0 0 0;
+	align-self: flex-end;
+}
+
+#message {
+	height: 15em;
+	padding: 1em;
 }
 
 /* SECTION STYLES */
@@ -319,6 +346,7 @@ html {
 	font-size: 1.4em;
 	border: none;
 	border: 0.15em solid transparent;
+	width: 8em;
 }
 
 .primary-button:hover {
@@ -327,3 +355,12 @@ html {
 }
 
 /* LINK STYLES */
+
+/* UTILITY STYLES */
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
