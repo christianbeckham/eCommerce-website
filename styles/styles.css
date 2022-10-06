@@ -24,7 +24,7 @@ html {
 	display: grid;
 	grid-auto-flow: column;
 	grid-auto-columns: 1fr;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	text-transform: uppercase;
 	margin: 1em 8em;
 	padding: 0 0 1em 0;
@@ -100,15 +100,15 @@ html {
 	background: linear-gradient(
 			to right,
 			rgba(0, 0, 0, 1) 0%,
-			rgba(0, 0, 0, 1) 10%,
-			rgba(0, 0, 0, 1) 10%,
+			rgba(0, 0, 0, 1) 15%,
+			rgba(0, 0, 0, 1) 15%,
 			rgba(0, 0, 0, 0) 25%,
 			rgba(0, 0, 0, 0) 25%,
 			rgba(0, 0, 0, 0) 50%,
 			rgba(0, 0, 0, 0) 75%,
 			rgba(0, 0, 0, 0) 75%,
-			rgba(0, 0, 0, 1) 90%,
-			rgba(0, 0, 0, 1) 90%,
+			rgba(0, 0, 0, 1) 85%,
+			rgba(0, 0, 0, 1) 85%,
 			rgba(0, 0, 0, 1) 100%
 		),
 		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg"), rgba(0, 0, 0, 0);
@@ -141,3 +141,189 @@ html {
 	text-align: right;
 }
 
+/* ABOUT STYLES */
+.about {
+	display: flex;
+	min-height: 70vh;
+	overflow: hidden;
+}
+
+.about > *:not(:last-child) {
+	padding-right: 10em;
+}
+
+/* PRODUCTS STYLES */
+.products-grid {
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: auto auto auto;
+	gap: 12em 15em;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.product-image {
+	display: block;
+	width: 100%;
+	height: 40em;
+	object-fit: cover;
+	border: 0.1em solid var(--gray);
+}
+
+.product-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0.5em 0;
+	padding: 1em 0;
+	position: relative;
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+.product-title {
+	font-weight: 100;
+}
+
+.product-info::after {
+	display: block;
+	content: "";
+	border-bottom: 0.35em solid var(--black);
+	width: 75%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.product-price {
+	font-weight: 100;
+	font-size: 1.4em;
+}
+
+.product-description {
+	font-size: 1.4em;
+	margin: 0.75em 0;
+	color: var(--gray);
+}
+
+.product-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	text-transform: uppercase;
+	margin: 0.5em 0;
+}
+
+.product-actions > a {
+	color: var(--gold);
+	font-size: 1.4em;
+	letter-spacing: 0.1em;
+}
+
+.product-actions > a:hover {
+	filter: brightness(85%);
+}
+
+.product-actions > button {
+	background-color: var(--gold);
+	padding: 0.25em 0.75em;
+	color: var(--white);
+	text-transform: uppercase;
+	font-size: 1.4em;
+	border: none;
+	border: 0.15em solid transparent;
+}
+
+.product-actions > button:hover {
+	cursor: pointer;
+	border: 0.15em solid var(--gray);
+}
+
+/* CONTACT STYLES */
+.contact-form {
+
+}
+
+/* SECTION STYLES */
+.section {
+	margin: 10em;
+}
+
+/* HEADER STYLES */
+.main-header {
+	font-size: 3.2em;
+	text-transform: uppercase;
+	font-weight: 100;
+	letter-spacing: 0.15em;
+	margin: 0 0 2em 0;
+}
+
+.main-header::after {
+	display: block;
+	content: "";
+	border-bottom: 0.15em solid var(--black);
+	width: 60%;
+	margin: 0.25em 0 0 0;
+}
+
+/* IMAGE STYLES */
+.thumbnail-image {
+	display: block;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.small-image {
+	height: 40em;
+}
+
+.medium-image {
+	height: 50em;
+}
+
+.large-image {
+	height: 60em;
+}
+
+.reverse-image {
+	transform: scaleX(-1);
+}
+
+/* TEXT STYLES */
+.text {
+	color: var(--gray);
+	font-size: 1.4em;
+	font-weight: 100;
+	letter-spacing: 0.12em;
+	padding: 0 0 5em 5em;
+}
+
+.image-text-order {
+	display: flex;
+	/* background-color: green; */
+}
+
+/* BUTTON STYLES */
+.primary-button {
+	background-color: var(--gold);
+	padding: 0.25em 0.75em;
+	color: var(--white);
+	text-transform: uppercase;
+	font-size: 1.4em;
+	border: none;
+	border: 0.15em solid transparent;
+}
+
+.primary-button:hover {
+	cursor: pointer;
+	border: 0.15em solid var(--gray);
+}
+
+/* LINK STYLES */
