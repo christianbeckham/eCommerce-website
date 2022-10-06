@@ -223,31 +223,6 @@ html {
 	margin: 0.5em 0;
 }
 
-.product-actions > a {
-	color: var(--gold);
-	font-size: 1.4em;
-	letter-spacing: 0.1em;
-}
-
-.product-actions > a:hover {
-	filter: brightness(85%);
-}
-
-.product-actions > button {
-	background-color: var(--gold);
-	padding: 0.25em 0.75em;
-	color: var(--white);
-	text-transform: uppercase;
-	font-size: 1.4em;
-	border: none;
-	border: 0.15em solid transparent;
-}
-
-.product-actions > button:hover {
-	cursor: pointer;
-	border: 0.15em solid var(--gray);
-}
-
 /* CONTACT STYLES */
 .contact-form {
 	width: 70%;
@@ -351,13 +326,6 @@ html {
 }
 
 /* IMAGE STYLES */
-.thumbnail-image {
-	display: block;
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-}
-
 .small-image {
 	height: 40em;
 }
@@ -368,10 +336,6 @@ html {
 
 .large-image {
 	height: 60em;
-}
-
-.reverse-image {
-	transform: scaleX(-1);
 }
 
 /* TEXT STYLES */
@@ -395,9 +359,8 @@ html {
 	color: var(--white);
 	text-transform: uppercase;
 	font-size: 1.4em;
-	border: none;
 	border: 0.15em solid transparent;
-	width: 8em;
+	min-width: 8em;
 }
 
 .primary-button:hover {
@@ -406,12 +369,17 @@ html {
 }
 
 /* LINK STYLES */
-
-/* UTILITY STYLES */
-.left {
-	float: left;
+.primary-link {
+	color: var(--gold);
+	font-size: 1.4em;
+	letter-spacing: 0.1em;
 }
 
-.right {
-	float: right;
+.primary-link:hover {
+	filter: brightness(85%);
+}
+
+/* UTILITY STYLES */
+.reverse {
+	transform: scaleX(-1);
 }
