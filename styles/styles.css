@@ -115,7 +115,7 @@ html {
 			rgba(0, 0, 0, 1) 85%,
 			rgba(0, 0, 0, 1) 100%
 		),
-		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg");
+		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg"), rgba(0, 0, 0, 1);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
