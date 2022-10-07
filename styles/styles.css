@@ -97,6 +97,7 @@ html {
 .hero {
 	display: flex;
 	justify-content: center;
+	margin: 2.5em 0 0 0;
 }
 
 .hero-bg-image {
@@ -135,6 +136,7 @@ html {
 	align-self: flex-start;
 	font-weight: 100;
 	width: 20%;
+	letter-spacing: 0.05em;
 }
 
 .hero-text-right {
@@ -142,6 +144,7 @@ html {
 	font-weight: 100;
 	width: 20%;
 	text-align: right;
+	letter-spacing: 0.05em;
 }
 
 /* ABOUT STYLES */
@@ -161,11 +164,15 @@ html {
 	grid-area: text-only-area;
 }
 
+.text-only-area > .text:first-child {
+	padding: 0 0 5em 3em;
+}
+
 .img-text-area {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
-	gap: 0 2.5em;
+	gap: 0;
 	grid-auto-flow: row;
 	grid-template-areas: "img-left-area text-right-area";
 	grid-area: img-text-area;
@@ -182,7 +189,14 @@ html {
 }
 
 .text-right-area {
+	display: flex;
+	flex-direction: column;
 	grid-area: text-right-area;
+	padding: 0 0 5em 10em;
+}
+
+.text-right-area > .text:first-child {
+	padding: 0 0 5em 0;
 }
 
 .right-img-area {
@@ -287,7 +301,6 @@ html {
 .contact-form-inputs > label {
 	font-size: 1.6em;
 	font-weight: 100;
-	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	margin: 0.5em 0;
 }
@@ -311,46 +324,86 @@ html {
 
 /* FOOTER STYLES */
 .footer {
-	display: flex;
-	flex-direction: column;
 	background-color: var(--gold);
-	padding: 2em 0;
+	padding: 2.5em 0 0 0;
 }
 
-.footer > .social {
+.footer-container {
+	display: grid;
+	grid-template-columns: 1.2fr 1.6fr 1.2fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"top-left top-middle top-right"
+		"lower lower lower";
+}
+
+.top-left {
+	grid-area: top-left;
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: flex-end;
+}
+
+.top-middle {
+	grid-area: top-middle;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-right {
+	grid-area: top-right;
+	display: flex;
+	align-items: center;
+}
+
+.lower {
+	display: grid;
+	grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
+	grid-template-rows: 1fr;
+	gap: 0px 20em;
+	grid-auto-flow: row;
+	grid-template-areas: "lower-one lower-two lower-three lower-four";
+	grid-area: lower;
+}
+
+.lower-one {
+	grid-area: lower-one;
+}
+
+.lower-two {
+	grid-area: lower-two;
+}
+
+.lower-three {
+	grid-area: lower-three;
+	text-align: right;
+}
+
+.lower-four {
+	grid-area: lower-four;
+	text-align: center;
 }
 
 .footer-icons {
-	height: 4em;
+	height: 4.5em;
 }
 
-.footer .footer-logo {
-	display: flex;
-	align-items: center;
-}
-
-.footer-logo > .logo-title {
+.footer-logo-title {
 	font-size: 2.5em;
 	text-transform: uppercase;
-	font-weight: 600;
+	letter-spacing: 0.25em;
+	margin-right: -0.25em;
 }
 
-.footer-logo > .logo {
-	font-size: 2em;
+.footer-logo {
+	height: 6em;
 }
 
-.footer > .company-message {
-	display: flex;
-	text-align: right;
-	font-size: 1.2em;
-}
-
-.footer > .company-message > * {
-	flex: 1;
-	padding: 0 1em 0 0;
+.footer-text {
+	font-size: 1.4em;
 }
 
 /* SECTION STYLES */
@@ -363,7 +416,7 @@ html {
 	font-size: 3.2em;
 	text-transform: uppercase;
 	font-weight: 100;
-	letter-spacing: 0.15em;
+	letter-spacing: 0.05em;
 	margin: 0 0 2em 0;
 }
 
@@ -379,7 +432,6 @@ html {
 .text {
 	font-size: 1.4em;
 	letter-spacing: 0.05em;
-	padding: 0 0 5em 3.5em;
 }
 
 /* BUTTON STYLES */
