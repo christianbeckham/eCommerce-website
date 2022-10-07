@@ -56,7 +56,7 @@ html {
 
 .logo-title {
 	font-size: 2em;
-	font-weight: 500;
+	font-weight: 400;
 	letter-spacing: 0.25em;
 	margin-right: -0.25em;
 }
@@ -114,7 +114,7 @@ html {
 			rgba(0, 0, 0, 1) 85%,
 			rgba(0, 0, 0, 1) 100%
 		),
-		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg"), rgba(0, 0, 0, 0);
+		url("../images/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -145,14 +145,60 @@ html {
 }
 
 /* ABOUT STYLES */
-.about {
-	display: flex;
-	min-height: 70vh;
-	overflow: hidden;
+.about-container {
+	display: grid;
+	grid-template-columns: 6fr 4fr;
+	grid-template-rows: auto auto auto;
+	gap: 0 5em;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"text-only-area right-img-area"
+		"img-text-area right-img-area"
+		"img-text-area right-img-area";
 }
 
-.about > *:not(:last-child) {
-	padding-right: 10em;
+.text-only-area {
+	grid-area: text-only-area;
+}
+
+.img-text-area {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0 2.5em;
+	grid-auto-flow: row;
+	grid-template-areas: "img-left-area text-right-area";
+	grid-area: img-text-area;
+}
+
+.img-left-area {
+	grid-area: img-left-area;
+}
+
+.left-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.text-right-area {
+	grid-area: text-right-area;
+}
+
+.right-img-area {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	gap: 0;
+	grid-auto-flow: row;
+	grid-template-areas: ".";
+	grid-area: right-img-area;
+}
+
+.right-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /* PRODUCTS STYLES */
@@ -211,7 +257,6 @@ html {
 .product-description {
 	font-size: 1.4em;
 	margin: 0.75em 0;
-	color: var(--gray);
 }
 
 .product-actions {
@@ -264,7 +309,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--gold);
-	padding: 1.5em 0;
+	padding: 2em 0;
 }
 
 .footer > .social {
@@ -325,31 +370,11 @@ html {
 	margin: 0.25em 0 0 0;
 }
 
-/* IMAGE STYLES */
-.small-image {
-	height: 40em;
-}
-
-.medium-image {
-	height: 50em;
-}
-
-.large-image {
-	height: 60em;
-}
-
 /* TEXT STYLES */
 .text {
-	color: var(--gray);
 	font-size: 1.4em;
-	font-weight: 100;
-	letter-spacing: 0.12em;
-	padding: 0 0 5em 5em;
-}
-
-.image-text-order {
-	display: flex;
-	/* background-color: green; */
+	letter-spacing: 0.05em;
+	padding: 0 0 5em 3.5em;
 }
 
 /* BUTTON STYLES */
